@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git credentialsId: 'github-token', url: 'https://github.com/Purvi-joshi/jenkins-pipeline-troubleshooting.git'
+                git branch: 'main', credentialsId: 'github-token', url: 'https://github.com/Purvi-joshi/jenkins-pipeline-troubleshooting.git'
             }
         }
         stage('Build') {
